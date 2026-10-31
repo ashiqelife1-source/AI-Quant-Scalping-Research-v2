@@ -1,0 +1,27 @@
+strategy:
+  name: "standalone_supertrend"
+  atr_period: 10
+  multiplier: 3.0
+  skip_after_trade: 2
+  risk_reward_ratio: 2.0
+
+execution:
+  initial_capital: 100000.0
+  risk_per_trade_pct: 0.01
+  stop_loss_points: 15.0
+  spread: 0.05
+  commission_per_trade: 0.0
+  slippage: 0.0
+  timezone: "UTC"
+  entry_rule: "next_bar_open"
+  close_collision_policy: "stop_first"
+
+market:
+  symbol: "XAUUSD"
+  timeframe: "1m"
+  timezone: "UTC"
+
+paths:
+  data_dir: "data/raw"
+  processed_dir: "data/processed"
+  reports_dir: "reports"
